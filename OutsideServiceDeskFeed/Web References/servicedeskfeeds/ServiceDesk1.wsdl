@@ -1,0 +1,888 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="GetTagInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="tag" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="tech" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTagInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetTagInfoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetOpenRequests">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="tech" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetOpenRequestsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetOpenRequestsResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetOpenRequests2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="tech" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetOpenRequests2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetOpenRequests2Result" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAllRequesters">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="tech" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAllRequestersResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAllRequestersResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetWODetails">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="WO" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="tech" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetWODetailsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetWODetailsResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddWorkLog">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Hours" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Minutes" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Owner" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Request" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="tech" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddWorkLogResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AddWorkLogResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddNote">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="isPublic" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="noteText" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Request" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="tech" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddNoteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AddNoteResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ReassignAsset">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="asset" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="tech" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="newUser" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ReassignAssetResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ReassignAssetResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CloseWO">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Request" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="tech" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="AddTime" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CloseComments" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="techName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CloseWOResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CloseWOResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTechInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="api" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTechInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetTechInfoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="string" nillable="true" type="s:string" />
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetTagInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetTagInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetTagInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetTagInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetOpenRequestsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetOpenRequests" />
+  </wsdl:message>
+  <wsdl:message name="GetOpenRequestsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetOpenRequestsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetOpenRequests2SoapIn">
+    <wsdl:part name="parameters" element="tns:GetOpenRequests2" />
+  </wsdl:message>
+  <wsdl:message name="GetOpenRequests2SoapOut">
+    <wsdl:part name="parameters" element="tns:GetOpenRequests2Response" />
+  </wsdl:message>
+  <wsdl:message name="GetAllRequestersSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAllRequesters" />
+  </wsdl:message>
+  <wsdl:message name="GetAllRequestersSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAllRequestersResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetWODetailsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetWODetails" />
+  </wsdl:message>
+  <wsdl:message name="GetWODetailsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetWODetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddWorkLogSoapIn">
+    <wsdl:part name="parameters" element="tns:AddWorkLog" />
+  </wsdl:message>
+  <wsdl:message name="AddWorkLogSoapOut">
+    <wsdl:part name="parameters" element="tns:AddWorkLogResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddNoteSoapIn">
+    <wsdl:part name="parameters" element="tns:AddNote" />
+  </wsdl:message>
+  <wsdl:message name="AddNoteSoapOut">
+    <wsdl:part name="parameters" element="tns:AddNoteResponse" />
+  </wsdl:message>
+  <wsdl:message name="ReassignAssetSoapIn">
+    <wsdl:part name="parameters" element="tns:ReassignAsset" />
+  </wsdl:message>
+  <wsdl:message name="ReassignAssetSoapOut">
+    <wsdl:part name="parameters" element="tns:ReassignAssetResponse" />
+  </wsdl:message>
+  <wsdl:message name="CloseWOSoapIn">
+    <wsdl:part name="parameters" element="tns:CloseWO" />
+  </wsdl:message>
+  <wsdl:message name="CloseWOSoapOut">
+    <wsdl:part name="parameters" element="tns:CloseWOResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetTechInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetTechInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetTechInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetTechInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetTagInfoHttpGetIn">
+    <wsdl:part name="tag" type="s:string" />
+    <wsdl:part name="tech" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetTagInfoHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetOpenRequestsHttpGetIn">
+    <wsdl:part name="tech" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetOpenRequestsHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetOpenRequests2HttpGetIn">
+    <wsdl:part name="tech" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetOpenRequests2HttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetAllRequestersHttpGetIn">
+    <wsdl:part name="tech" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetAllRequestersHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetWODetailsHttpGetIn">
+    <wsdl:part name="WO" type="s:string" />
+    <wsdl:part name="tech" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetWODetailsHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="AddWorkLogHttpGetIn">
+    <wsdl:part name="Hours" type="s:string" />
+    <wsdl:part name="Minutes" type="s:string" />
+    <wsdl:part name="Description" type="s:string" />
+    <wsdl:part name="Owner" type="s:string" />
+    <wsdl:part name="Request" type="s:string" />
+    <wsdl:part name="tech" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AddWorkLogHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="AddNoteHttpGetIn">
+    <wsdl:part name="isPublic" type="s:string" />
+    <wsdl:part name="noteText" type="s:string" />
+    <wsdl:part name="Request" type="s:string" />
+    <wsdl:part name="tech" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AddNoteHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="ReassignAssetHttpGetIn">
+    <wsdl:part name="asset" type="s:string" />
+    <wsdl:part name="tech" type="s:string" />
+    <wsdl:part name="newUser" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ReassignAssetHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="CloseWOHttpGetIn">
+    <wsdl:part name="Request" type="s:string" />
+    <wsdl:part name="tech" type="s:string" />
+    <wsdl:part name="AddTime" type="s:string" />
+    <wsdl:part name="CloseComments" type="s:string" />
+    <wsdl:part name="techName" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CloseWOHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetTechInfoHttpGetIn">
+    <wsdl:part name="api" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetTechInfoHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetTagInfoHttpPostIn">
+    <wsdl:part name="tag" type="s:string" />
+    <wsdl:part name="tech" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetTagInfoHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetOpenRequestsHttpPostIn">
+    <wsdl:part name="tech" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetOpenRequestsHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetOpenRequests2HttpPostIn">
+    <wsdl:part name="tech" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetOpenRequests2HttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetAllRequestersHttpPostIn">
+    <wsdl:part name="tech" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetAllRequestersHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetWODetailsHttpPostIn">
+    <wsdl:part name="WO" type="s:string" />
+    <wsdl:part name="tech" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetWODetailsHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="AddWorkLogHttpPostIn">
+    <wsdl:part name="Hours" type="s:string" />
+    <wsdl:part name="Minutes" type="s:string" />
+    <wsdl:part name="Description" type="s:string" />
+    <wsdl:part name="Owner" type="s:string" />
+    <wsdl:part name="Request" type="s:string" />
+    <wsdl:part name="tech" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AddWorkLogHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="AddNoteHttpPostIn">
+    <wsdl:part name="isPublic" type="s:string" />
+    <wsdl:part name="noteText" type="s:string" />
+    <wsdl:part name="Request" type="s:string" />
+    <wsdl:part name="tech" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AddNoteHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="ReassignAssetHttpPostIn">
+    <wsdl:part name="asset" type="s:string" />
+    <wsdl:part name="tech" type="s:string" />
+    <wsdl:part name="newUser" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ReassignAssetHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="CloseWOHttpPostIn">
+    <wsdl:part name="Request" type="s:string" />
+    <wsdl:part name="tech" type="s:string" />
+    <wsdl:part name="AddTime" type="s:string" />
+    <wsdl:part name="CloseComments" type="s:string" />
+    <wsdl:part name="techName" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CloseWOHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetTechInfoHttpPostIn">
+    <wsdl:part name="api" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetTechInfoHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:portType name="ServiceDesk1Soap">
+    <wsdl:operation name="GetTagInfo">
+      <wsdl:input message="tns:GetTagInfoSoapIn" />
+      <wsdl:output message="tns:GetTagInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOpenRequests">
+      <wsdl:input message="tns:GetOpenRequestsSoapIn" />
+      <wsdl:output message="tns:GetOpenRequestsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOpenRequests2">
+      <wsdl:input message="tns:GetOpenRequests2SoapIn" />
+      <wsdl:output message="tns:GetOpenRequests2SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllRequesters">
+      <wsdl:input message="tns:GetAllRequestersSoapIn" />
+      <wsdl:output message="tns:GetAllRequestersSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWODetails">
+      <wsdl:input message="tns:GetWODetailsSoapIn" />
+      <wsdl:output message="tns:GetWODetailsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddWorkLog">
+      <wsdl:input message="tns:AddWorkLogSoapIn" />
+      <wsdl:output message="tns:AddWorkLogSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddNote">
+      <wsdl:input message="tns:AddNoteSoapIn" />
+      <wsdl:output message="tns:AddNoteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ReassignAsset">
+      <wsdl:input message="tns:ReassignAssetSoapIn" />
+      <wsdl:output message="tns:ReassignAssetSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CloseWO">
+      <wsdl:input message="tns:CloseWOSoapIn" />
+      <wsdl:output message="tns:CloseWOSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTechInfo">
+      <wsdl:input message="tns:GetTechInfoSoapIn" />
+      <wsdl:output message="tns:GetTechInfoSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="ServiceDesk1HttpGet">
+    <wsdl:operation name="GetTagInfo">
+      <wsdl:input message="tns:GetTagInfoHttpGetIn" />
+      <wsdl:output message="tns:GetTagInfoHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOpenRequests">
+      <wsdl:input message="tns:GetOpenRequestsHttpGetIn" />
+      <wsdl:output message="tns:GetOpenRequestsHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOpenRequests2">
+      <wsdl:input message="tns:GetOpenRequests2HttpGetIn" />
+      <wsdl:output message="tns:GetOpenRequests2HttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllRequesters">
+      <wsdl:input message="tns:GetAllRequestersHttpGetIn" />
+      <wsdl:output message="tns:GetAllRequestersHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWODetails">
+      <wsdl:input message="tns:GetWODetailsHttpGetIn" />
+      <wsdl:output message="tns:GetWODetailsHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddWorkLog">
+      <wsdl:input message="tns:AddWorkLogHttpGetIn" />
+      <wsdl:output message="tns:AddWorkLogHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddNote">
+      <wsdl:input message="tns:AddNoteHttpGetIn" />
+      <wsdl:output message="tns:AddNoteHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ReassignAsset">
+      <wsdl:input message="tns:ReassignAssetHttpGetIn" />
+      <wsdl:output message="tns:ReassignAssetHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CloseWO">
+      <wsdl:input message="tns:CloseWOHttpGetIn" />
+      <wsdl:output message="tns:CloseWOHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTechInfo">
+      <wsdl:input message="tns:GetTechInfoHttpGetIn" />
+      <wsdl:output message="tns:GetTechInfoHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="ServiceDesk1HttpPost">
+    <wsdl:operation name="GetTagInfo">
+      <wsdl:input message="tns:GetTagInfoHttpPostIn" />
+      <wsdl:output message="tns:GetTagInfoHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOpenRequests">
+      <wsdl:input message="tns:GetOpenRequestsHttpPostIn" />
+      <wsdl:output message="tns:GetOpenRequestsHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOpenRequests2">
+      <wsdl:input message="tns:GetOpenRequests2HttpPostIn" />
+      <wsdl:output message="tns:GetOpenRequests2HttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllRequesters">
+      <wsdl:input message="tns:GetAllRequestersHttpPostIn" />
+      <wsdl:output message="tns:GetAllRequestersHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWODetails">
+      <wsdl:input message="tns:GetWODetailsHttpPostIn" />
+      <wsdl:output message="tns:GetWODetailsHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddWorkLog">
+      <wsdl:input message="tns:AddWorkLogHttpPostIn" />
+      <wsdl:output message="tns:AddWorkLogHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddNote">
+      <wsdl:input message="tns:AddNoteHttpPostIn" />
+      <wsdl:output message="tns:AddNoteHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ReassignAsset">
+      <wsdl:input message="tns:ReassignAssetHttpPostIn" />
+      <wsdl:output message="tns:ReassignAssetHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CloseWO">
+      <wsdl:input message="tns:CloseWOHttpPostIn" />
+      <wsdl:output message="tns:CloseWOHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTechInfo">
+      <wsdl:input message="tns:GetTechInfoHttpPostIn" />
+      <wsdl:output message="tns:GetTechInfoHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ServiceDesk1Soap" type="tns:ServiceDesk1Soap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetTagInfo">
+      <soap:operation soapAction="http://tempuri.org/GetTagInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOpenRequests">
+      <soap:operation soapAction="http://tempuri.org/GetOpenRequests" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOpenRequests2">
+      <soap:operation soapAction="http://tempuri.org/GetOpenRequests2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllRequesters">
+      <soap:operation soapAction="http://tempuri.org/GetAllRequesters" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWODetails">
+      <soap:operation soapAction="http://tempuri.org/GetWODetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddWorkLog">
+      <soap:operation soapAction="http://tempuri.org/AddWorkLog" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddNote">
+      <soap:operation soapAction="http://tempuri.org/AddNote" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReassignAsset">
+      <soap:operation soapAction="http://tempuri.org/ReassignAsset" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CloseWO">
+      <soap:operation soapAction="http://tempuri.org/CloseWO" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTechInfo">
+      <soap:operation soapAction="http://tempuri.org/GetTechInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ServiceDesk1Soap12" type="tns:ServiceDesk1Soap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetTagInfo">
+      <soap12:operation soapAction="http://tempuri.org/GetTagInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOpenRequests">
+      <soap12:operation soapAction="http://tempuri.org/GetOpenRequests" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOpenRequests2">
+      <soap12:operation soapAction="http://tempuri.org/GetOpenRequests2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllRequesters">
+      <soap12:operation soapAction="http://tempuri.org/GetAllRequesters" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWODetails">
+      <soap12:operation soapAction="http://tempuri.org/GetWODetails" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddWorkLog">
+      <soap12:operation soapAction="http://tempuri.org/AddWorkLog" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddNote">
+      <soap12:operation soapAction="http://tempuri.org/AddNote" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReassignAsset">
+      <soap12:operation soapAction="http://tempuri.org/ReassignAsset" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CloseWO">
+      <soap12:operation soapAction="http://tempuri.org/CloseWO" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTechInfo">
+      <soap12:operation soapAction="http://tempuri.org/GetTechInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ServiceDesk1HttpGet" type="tns:ServiceDesk1HttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="GetTagInfo">
+      <http:operation location="/GetTagInfo" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOpenRequests">
+      <http:operation location="/GetOpenRequests" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOpenRequests2">
+      <http:operation location="/GetOpenRequests2" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllRequesters">
+      <http:operation location="/GetAllRequesters" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWODetails">
+      <http:operation location="/GetWODetails" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddWorkLog">
+      <http:operation location="/AddWorkLog" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddNote">
+      <http:operation location="/AddNote" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReassignAsset">
+      <http:operation location="/ReassignAsset" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CloseWO">
+      <http:operation location="/CloseWO" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTechInfo">
+      <http:operation location="/GetTechInfo" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ServiceDesk1HttpPost" type="tns:ServiceDesk1HttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="GetTagInfo">
+      <http:operation location="/GetTagInfo" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOpenRequests">
+      <http:operation location="/GetOpenRequests" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOpenRequests2">
+      <http:operation location="/GetOpenRequests2" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllRequesters">
+      <http:operation location="/GetAllRequesters" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWODetails">
+      <http:operation location="/GetWODetails" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddWorkLog">
+      <http:operation location="/AddWorkLog" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddNote">
+      <http:operation location="/AddNote" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReassignAsset">
+      <http:operation location="/ReassignAsset" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CloseWO">
+      <http:operation location="/CloseWO" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTechInfo">
+      <http:operation location="/GetTechInfo" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ServiceDesk1">
+    <wsdl:port name="ServiceDesk1Soap" binding="tns:ServiceDesk1Soap">
+      <soap:address location="http://servicedeskfeeds:8888/ServiceDesk1.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ServiceDesk1Soap12" binding="tns:ServiceDesk1Soap12">
+      <soap12:address location="http://servicedeskfeeds:8888/ServiceDesk1.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ServiceDesk1HttpGet" binding="tns:ServiceDesk1HttpGet">
+      <http:address location="http://servicedeskfeeds:8888/ServiceDesk1.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ServiceDesk1HttpPost" binding="tns:ServiceDesk1HttpPost">
+      <http:address location="http://servicedeskfeeds:8888/ServiceDesk1.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

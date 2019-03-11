@@ -1,0 +1,17 @@
+﻿<API version="1.0" locale="en">
+        <criterias>
+            <criteria>
+              <parameter>
+                <name compOperator="IS">CI Name</name>
+                <value>[CI Name]</value>
+              </parameter>
+            </criteria>
+        </criterias>
+        <returnFields>
+            <name>*</name>
+        </returnFields>
+        <range>
+            <startindex>1</startindex>
+            <limit>50</limit>
+        </range>
+</API>

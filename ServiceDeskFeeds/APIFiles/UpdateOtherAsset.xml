@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<API version="1.0" >        
+    <citype>
+        <name>{0}</name>
+        <criterias>
+            <criteria>
+                <parameter>
+                    <name compOperator="IS">CI Name</name>
+                    <value>{1}</value>
+                </parameter>
+            </criteria>
+        </criterias>
+        <newvalue>
+        <record>
+            <!-- Multi value parameters -->
+            <multi-valued-parameter name="Assign Ownership">
+                <record>
+                   <parameter><name>Associate to Asset</name><value>{2}</value></parameter>
+                   <parameter><name>Department's site</name><value>{3}</value></parameter>
+                </record>
+            </multi-valued-parameter>    
+        </record>
+        </newvalue>
+    </citype>
+</API>

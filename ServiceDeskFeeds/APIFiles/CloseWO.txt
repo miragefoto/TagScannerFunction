@@ -1,0 +1,1 @@
+﻿{"operation":{"details":[{"parameter":[{"name":"closeAccepted"},{"value":"Accepted"}]},{"parameter":[{"name":"closeComment"},{"value":"{0}"}]}]}}

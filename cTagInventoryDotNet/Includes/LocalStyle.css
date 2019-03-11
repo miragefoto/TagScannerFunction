@@ -1,0 +1,63 @@
+﻿#panelHeader {
+    min-height: 70px;
+}
+
+body {
+    margin: 10px;
+}
+
+.rgMasterTable select {
+    font: 12px "segoe ui",arial,sans-serif !important;
+    height: 1.833em !important;
+    vertical-align: middle !important;
+}
+
+.rgSelectedRow, .rgSelectedRow td {
+    background-color: lightskyblue;
+    color: black;
+}
+
+.rgActiveRow, .rgActiveRow td {
+    background: lightskyblue;
+    outline-color: blue;
+    color: black;
+}
+
+.rgMasterTable .btn {
+    color: black !important;
+    text-align: center;
+    text-decoration: none;
+}
+
+#lnkReport {
+    position: fixed;
+    top: 25px;
+    right: 60px;
+    color: white;
+}
+
+#ctl00_ContentPlaceHolder1_gridCases .rgCommandTable thead {
+}
+
+#ctl00_ContentPlaceHolder1_gridCases .rgCommandCell .rgRefresh {
+}
+
+.MyOutline {
+    border: none;
+}
+
+.lbl {
+    background-color: whitesmoke;
+}
+
+.hideOnDef {
+    display: none !important;
+}
+
+.hideOnNew {
+    display: none !important;
+}
+
+.MargRt20{
+    margin-right:20px;
+}

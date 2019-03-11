@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<API version="1.0">
+  <citype>
+    <name>[citype]</name>
+    <criterias>
+      <criteria>
+        <parameter>
+          <name compOperator="IS">Asset Tag</name>
+          <value>[Asset Tag]</value>
+        </parameter>
+      </criteria>
+    </criterias>
+    <returnFields>
+      <name>*</name>
+    </returnFields>
+  </citype>
+</API>

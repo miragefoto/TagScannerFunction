@@ -1,0 +1,9 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="OutsideServiceDeskFeed_WebApi.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="OutsideServiceDeskFeed_WebApi_servicedeskfeeds_ServiceDesk1" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://servicedeskfeeds:8888/ServiceDesk1.asmx</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

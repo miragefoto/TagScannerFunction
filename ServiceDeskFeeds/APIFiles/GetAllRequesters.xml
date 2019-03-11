@@ -1,0 +1,32 @@
+﻿<API version="1.0" locale="en">
+  <citype>
+    <name>requester</name>
+    <criterias>
+      <criteria>
+        <parameter>
+          <name compOperator="IS">CI Type</name>
+          <value>Requester</value>
+        </parameter>
+      </criteria>
+      <criteria>
+        <parameter>
+          <name compOperator="IS">Status</name>
+          <value>Active</value>
+        </parameter>
+        <reloperator>AND</reloperator>
+        <parameter>
+          <name compOperator="IS">Domain</name>
+          <value>1</value>
+        </parameter>
+      </criteria>
+    </criterias>
+    <returnFields>
+      <name>CI Name</name>
+      <name>Department</name>
+    </returnFields>
+    <range>
+      <startindex>1</startindex>
+      <limit>5000</limit>
+    </range>
+  </citype>
+</API>

@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="ics_apps" Class="cTagDataDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=tcp:ccazuresql.database.windows.net,1433;Initial Catalog=ics_apps;Persist Security Info=True;User ID=CC_cTagUser" SettingsObjectName="cTagInventoryDotNet.Properties.Settings" SettingsPropertyName="ics_appsConnectionString" Provider="System.Data.SqlClient" />
+  <Function Name="cTag.UpsertScan" Method="UpsertScan">
+    <Parameter Name="TagNo" Parameter="tagNo" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="Location" Parameter="location" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="Status" Parameter="status" Type="System.Int32" DbType="Int" />
+    <Parameter Name="EditBy" Parameter="editBy" Type="System.String" DbType="VarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="cTag.GetScans" Method="GetScans">
+    <Parameter Name="cTag" Type="System.String" DbType="VarChar(50)" />
+    <ElementType Name="GetScansResult">
+      <Column Name="TagNo" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Location" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Status" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EditBy" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ValidFrom" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="ValidTo" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="GlobalPkey" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="GlobalValue" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="cTag.GetGlobals" Method="GetGlobals">
+    <Parameter Name="GlobalGroup" Parameter="globalGroup" Type="System.String" DbType="VarChar(50)" />
+    <ElementType Name="GetGlobalsResult">
+      <Column Name="GlobalPkey" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="GlobalGroup" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="GlobalValue" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Active" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </ElementType>
+  </Function>
+</Database>
